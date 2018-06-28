@@ -1,0 +1,198 @@
+html, body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 50px auto;
+}
+
+#message-wrapper {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-items: center;
+    align-items: center;
+    z-index: 10;
+    display: none;
+}
+
+#message-wrapper.active {
+    display: grid;
+}
+
+#message {
+    box-shadow: 0 0 8px black;
+    background: rgb(26, 118, 255);
+    font-size: 40px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: white;
+    box-shadow: 0 0 6px black;
+    z-index: 1;
+}
+
+.tab {
+    width: 100%;
+    height: calc(100% - 14px);
+    text-align: center;
+    padding-top: 14px;
+}
+
+.tab:not(:last-of-type) {
+    border-right: 1px solid gray;
+}
+
+.tab.current {
+    border-bottom: 1px solid blue;
+}
+
+main {
+    position: relative;
+    background: radial-gradient(white 0%, lightgray 100%);
+}
+
+#vier-op-een-rij {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+}
+
+#vier-op-een-rij #table {
+    width: 80vh;
+    height: 80vh;
+    margin-top: 5%;
+    margin-left: calc(50vw - 40vh);
+    border: 1px solid black;
+    display: grid;
+    grid-template-rows: repeat(8, 10vh);
+}
+
+#vier-op-een-rij #row {
+    display: grid;
+    grid-template-columns: repeat(8, 10vh);
+}
+
+#vier-op-een-rij #cell {
+    display: grid;
+    border: 1px solid black;
+    font-size: 5vh;
+}
+
+#vier-op-een-rij .center-vertical {
+    align-self: center;
+    justify-self: center;
+}
+
+#snake {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+
+}
+
+#snake #table {
+    width: 80vh;
+    height: 80vh;
+    margin-top: 5%;
+    margin-left: calc(50vw - 40vh);
+    background: black;
+}
+
+#snake #row {
+    height: 2%;
+}
+
+#snake #cel {
+    /* border: 1px solid black; */
+    width: calc(2% - 0px);
+    height: calc(100% - 0px);
+    display: inline-block;
+    position: relative;
+    top: -4px;
+}
+
+#snake #cel.body {
+    background: white;
+}
+
+#snake #cel.addition {
+    background: yellow;
+}
+
+#snake button {
+    margin-top: 5%;
+    margin-left: calc(50vw - 40vh - 80px);
+    height: 80vh;
+    width: 80px;
+    position: absolute;
+    background: red;
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+
+#boter-kaas-en-eieren {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+}
+
+#boter-kaas-en-eieren #table {
+    width: 80vh;
+    height: 80vh;
+    margin-top: 5%;
+    margin-left: calc(50vw - 40vh);
+    border: 1px solid black;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+#boter-kaas-en-eieren #row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#boter-kaas-en-eieren #cell {
+    display: grid;
+    border: 1px solid black;
+    font-size: 18vh;
+    overflow: hidden;
+}
+
+#boter-kaas-en-eieren #cell .center-vertical {
+    display: inline;
+    align-self: center;
+    justify-self: center;
+}
+
+.x {
+    color: rgb(0, 132, 255);
+}
+
+.o {
+    color: red;  
+}

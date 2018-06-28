@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="message-wrapper">
+        <div id="message"></div>
+    </div>
+    <header>
+        <div class="tab current" for="vier-op-een-rij">4 op een rij</div>
+        <div class="tab" for="snake">snake</div>
+        <div class="tab" for="boter-kaas-en-eieren">boter, kaas en eieren</div>
+    </header>
+    <main>
+        <div id="vier-op-een-rij">
+            <div id="table"></div>
+            <script>require("./4-op-een-rij.js")</script>
+        </div>
+        <div id="snake" style="display: none">
+            <button>Start</button>
+            <div id="table"></div>
+            <script>require("./snake.js")</script>
+        </div>
+        <div id="boter-kaas-en-eieren" style="display: none">
+            <div id="table"></div>
+            <script>require("./boter-kaas-en-eieren.js")</script>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
